@@ -35,9 +35,6 @@ class FlexibleWidget extends StatelessWidget {
                 width: 200,
               ),
             ),
-            const SizedBox(
-              width: 10,
-            ),
             Flexible(
               flex: 1,
               child: Container(
@@ -50,6 +47,13 @@ class FlexibleWidget extends StatelessWidget {
         ),
         const SizedBox(
           height: 10,
+        ),
+        const Divider(
+          height: 100,
+          color: Colors.black,
+          thickness: 2,
+          endIndent: 10,
+          indent: 50,
         ),
         Row(
           children: [
