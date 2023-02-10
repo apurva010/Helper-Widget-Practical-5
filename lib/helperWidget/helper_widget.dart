@@ -12,8 +12,32 @@ class HelperWidgets extends StatelessWidget {
             "Helper Widgets",
           ),
         ),
-        body: const FlexibleWidget(),
+        body: const VerticalDividerWidget(),
       ),
+    );
+  }
+}
+
+class VerticalDividerWidget extends StatelessWidget {
+  const VerticalDividerWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          width: 100,
+          color: Colors.red,
+        ),
+        const VerticalDivider(
+          thickness: 5,
+          color: Colors.black,
+        ),
+        Container(
+          width: 100,
+          color: Colors.red,
+        ),
+      ],
     );
   }
 }
