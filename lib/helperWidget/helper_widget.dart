@@ -12,8 +12,70 @@ class HelperWidgets extends StatelessWidget {
             "Helper Widgets",
           ),
         ),
-        body: const AlignWidget(),
+        body: const FlexibleWidget(),
       ),
+    );
+  }
+}
+
+class FlexibleWidget extends StatelessWidget {
+  const FlexibleWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Flexible(
+              flex: 1,
+              child: Container(
+                color: Colors.red,
+                height: 100,
+                width: 200,
+              ),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Flexible(
+              flex: 1,
+              child: Container(
+                color: Colors.red,
+                height: 100,
+                width: 200,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            Flexible(
+              flex: 1,
+              child: Container(
+                color: Colors.red,
+                height: 100,
+                width: 600,
+              ),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Flexible(
+              fit: FlexFit.loose,
+              flex: 1,
+              child: Container(
+                color: Colors.red,
+                height: 100,
+                width: 600,
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
@@ -30,7 +92,7 @@ class AlignWidget extends StatelessWidget {
         height: 100,
         width: 100,
         color: Colors.red,
-        child: Text("container"),
+        child: const Text("container"),
       ),
     );
   }
